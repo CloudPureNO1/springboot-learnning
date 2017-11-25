@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/learnning-domain/learnning-domain.iml" filepath="$PROJECT_DIR$/learnning-domain/learnning-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learnning-web/learnning-web.iml" filepath="$PROJECT_DIR$/learnning-web/learnning-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learnning-web-vo/learnning-web-vo.iml" filepath="$PROJECT_DIR$/learnning-web-vo/learnning-web-vo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/springboot-learnning.iml" filepath="$PROJECT_DIR$/.idea/springboot-learnning.iml" />
+    </modules>
+  </component>
+</project>
