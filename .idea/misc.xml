@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/learnning-web/pom.xml" />
         <option value="$PROJECT_DIR$/learnning-domain/pom.xml" />
         <option value="$PROJECT_DIR$/learnning-web-vo/pom.xml" />
+        <option value="$PROJECT_DIR$/learnning-thymeleaf/pom.xml" />
       </list>
     </option>
   </component>

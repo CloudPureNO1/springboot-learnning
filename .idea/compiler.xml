@@ -7,12 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="learnning-domain" />
+        <module name="learnning-thymeleaf" />
         <module name="learnning-web" />
         <module name="learnning-web-vo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="learnning-domain" target="1.8" />
+      <module name="learnning-thymeleaf" target="1.8" />
       <module name="learnning-web" target="1.8" />
       <module name="learnning-web-vo" target="1.8" />
     </bytecodeTargetLevel>

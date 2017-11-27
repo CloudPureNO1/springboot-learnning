@@ -3,8 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/learnning-domain/learnning-domain.iml" filepath="$PROJECT_DIR$/learnning-domain/learnning-domain.iml" />
+      <module fileurl="file://F:\Spring-Boot\springboot-learnning\learnning-domain\learnning-domain.iml" filepath="F:\Spring-Boot\springboot-learnning\learnning-domain\learnning-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learnning-thymeleaf/learnning-thymeleaf.iml" filepath="$PROJECT_DIR$/learnning-thymeleaf/learnning-thymeleaf.iml" />
       <module fileurl="file://$PROJECT_DIR$/learnning-web/learnning-web.iml" filepath="$PROJECT_DIR$/learnning-web/learnning-web.iml" />
+      <module fileurl="file://F:\Spring-Boot\springboot-learnning\learnning-web\learnning-web.iml" filepath="F:\Spring-Boot\springboot-learnning\learnning-web\learnning-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/learnning-web-vo/learnning-web-vo.iml" filepath="$PROJECT_DIR$/learnning-web-vo/learnning-web-vo.iml" />
+      <module fileurl="file://F:\Spring-Boot\springboot-learnning\learnning-web-vo\learnning-web-vo.iml" filepath="F:\Spring-Boot\springboot-learnning\learnning-web-vo\learnning-web-vo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/springboot-learnning.iml" filepath="$PROJECT_DIR$/.idea/springboot-learnning.iml" />
     </modules>
   </component>
