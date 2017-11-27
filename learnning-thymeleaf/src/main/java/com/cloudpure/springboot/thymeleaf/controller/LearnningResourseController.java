@@ -42,7 +42,7 @@ public class LearnningResourseController {
                 "This tutorial teaches you GitHub essentials like repositories, branches, commits, and Pull Requests. You’ll create your own Hello World repository and learn GitHub’s Pull Request workflow, a popular way to create and review code.");
         listResourse.add(resourse);
 
-        ModelAndView modelAndView=new ModelAndView("/learnningResourse");
+        ModelAndView modelAndView=new ModelAndView("learnningResourse");
         modelAndView.addObject("listResourse",listResourse);
 
        logger.info("**************** listResourse.get(0).toString()*******************");
