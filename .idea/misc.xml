@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/learnning-web-vo/pom.xml" />
         <option value="$PROJECT_DIR$/learnning-thymeleaf/pom.xml" />
         <option value="$PROJECT_DIR$/learnning-thymeleaf2/pom.xml" />
+        <option value="$PROJECT_DIR$/learnning-hotload/pom.xml" />
       </list>
     </option>
   </component>

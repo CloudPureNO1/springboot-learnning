@@ -1,0 +1,34 @@
+1、idea 中设置自动编译：
+File>>Settings>>Build,Execution,Deployment>>compliler>>Build project automatically 打钩
+2、maven依赖的方式:启动：mvn spring-boot:run    如果你也是IDEA的话，直接界面上双击运行即可
+注意：maven依赖的方式只适合spring-boot:run的启动方式，右键那种方式不行。
+注：IDEA下需要重新编译文件 Ctrl+Shift+F9或者编译项目 Ctrl+F9 ,才能实现更新
+
+pom.xml配置：
+<plugin>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-maven-plugin</artifactId>
+    <dependencies>
+        <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>springloaded</artifactId>
+        <version>1.2.6.RELEASE</version>
+        </dependency>
+    </dependencies>
+</plugin>
+
+
+
+
+如何测试热部署是否可用呢，你可以先写个简单的Controller方法，返回个字符串，然后启动项目，接着修改下这个方法返回的字符串，Ctrl+Shift+F9编译下当前类，然后再刷新下页面看看是否内容改变了。
+
+在 Spring Boot，模板引擎的页面默认是开启缓存，如果修改页面内容，刷新页面是无法获取修改后的页面内容，
+所以，如果我们不需要模板引擎的缓存，可以进行关闭。
+spring.freemarker.cache=false
+spring.thymeleaf.cache=false
+spring.velocity.cache=false
+经过简单的测试，发现大多数情况可以使用热部署，
+不过还是有一些情况下需要重新启动，不可用的情况如下：
+1：对于一些第三方框架的注解的修改，不能自动加载，比如：spring mvc的@RequestMapping
+2：application.properties的修改也不行
+3：log4j的配置文件的修改不能即时生效
