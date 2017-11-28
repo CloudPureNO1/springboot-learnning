@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>LoginPage</title>
+    <script src="../static/thirdPartJs/jquery-3.2.1.js" th:src="@{/thirdPartJs/jquery-3.2.1.js}"></script>
+</head>
+<body>
+<div>
+    <form action="#" method="post">
+    <div><span>UserName:</span><span><input type="text" id="username" name="username"/></span></div>
+    <div><span>Password:</span><span><input type="password" id="password" name="password"/></span></div>
+    <div align="left"><input type="button" id="button" name="button" value="submmit"/> </div>
+    </form>
+</div>
+
+<script type="text/javascript">
+    $("#button").click(function (e) {
+        console.log("*************登陆表单提交开始************"+$("#username").val()+":"+$("#password").val())
+        $.ajax({
+            type:"POST",
+            url:"/login",
+            data:{
+                username:$("#username").val(),
+                password:$("#password").val()
+            },
+            dataType:"json",
+            success : function(data) {
+                if (data.result == "1") {
+                    window.location.href ="/msg";
+                } else {
+                    alert("账号密码不能为空！");
+                }
+            }
+
+        })
+        console.log("*****************登陆表单提交结束**********************")
+    });
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

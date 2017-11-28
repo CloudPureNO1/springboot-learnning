@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>MsgPage</title>
+    <style type="text/css">
+        table {
+            text-align: center;
+            border-collapse:collapse;
+            border-right: 1px solid cyan;
+            border-bottom: 1px solid cyan;
+        }
+        table th {
+            border-left:1px solid cyan;
+            border-top:1px solid cyan;
+        }
+        table td {
+            border-left:1px solid cyan;
+            border-top:1px solid cyan;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <table>
+        <caption>学习资源信息</caption>
+        <tr>
+            <th style="width:15%;">资源名称</th>
+            <th style="width:15%;">资源所属者</th>
+            <th style="width:20%;">资源URL</th>
+            <th style="width:50%;">资源描述</th>
+        </tr>
+        <tr th:each="resourse:${listResourse}">
+            <td th:text="${resourse.resourseName}">默认值</td>
+            <td th:text="${resourse.resourseOwner}"></td>
+            <td><a th:href="${resourse.resourseURL}" target="_blank"><span th:text="${resourse.resourseURL}"></span></a></td>
+            <td th:text="${resourse.resourseDesc}"></td>
+        </tr>
+    </table>
+
+</div>
+</body>
+</html>
