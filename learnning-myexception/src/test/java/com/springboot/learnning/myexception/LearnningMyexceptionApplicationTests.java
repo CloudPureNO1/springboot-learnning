@@ -1,5 +1,7 @@
 package com.springboot.learnning.myexception;
 
+import com.springboot.learnning.myexception.domain.enums.ResultStatus;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,6 +13,8 @@ public class LearnningMyexceptionApplicationTests {
 
 	@Test
 	public void contextLoads() {
+
+
 	}
 
 }
