@@ -8,7 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="learnning-domain" />
         <module name="learnning-exception" />
+        <module name="learnning-exception2" />
         <module name="learnning-hotload" />
+        <module name="learnning-jpa" />
+        <module name="learnning-myexception" />
         <module name="learnning-thymeleaf" />
         <module name="learnning-thymeleaf2" />
         <module name="learnning-web" />
@@ -18,7 +21,11 @@
     <bytecodeTargetLevel>
       <module name="learnning-domain" target="1.8" />
       <module name="learnning-exception" target="1.8" />
+      <module name="learnning-exception2" target="1.8" />
       <module name="learnning-hotload" target="1.8" />
+      <module name="learnning-jpa" target="1.8" />
+      <module name="learnning-myexception" target="1.8" />
+      <module name="learnning-myexception2" target="1.8" />
       <module name="learnning-thymeleaf" target="1.8" />
       <module name="learnning-thymeleaf2" target="1.8" />
       <module name="learnning-web" target="1.8" />

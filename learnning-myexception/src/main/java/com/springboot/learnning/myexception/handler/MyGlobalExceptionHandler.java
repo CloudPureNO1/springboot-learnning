@@ -29,10 +29,13 @@ private static final Logger logger= Logger.getLogger(MyGlobalExceptionHandler.cl
     @ExceptionHandler(value=Exception.class)
     @ResponseBody
     public ResultInfo getExceptionResultInfo(HttpServletRequest request,Exception e){
-        StackTraceElement[] stackTraceElements= Thread.currentThread().getStackTrace();
         List<DataError>list=new ArrayList<DataError>();
         DataError dataError=null;
         int i=1;
+
+       /*
+       输出错误的地方
+       StackTraceElement[] stackTraceElements= Thread.currentThread().getStackTrace();
         for(StackTraceElement se:stackTraceElements){
             i++;
             if(i>4&&!(se.getClassName()).startsWith("com.")) continue;
@@ -43,8 +46,22 @@ private static final Logger logger= Logger.getLogger(MyGlobalExceptionHandler.cl
             dataError.setLineNumber(se.getLineNumber());
             dataError.setExceptionMsg(e.getMessage());
             list.add(dataError);
+        }*/
 
+       //发生异常的地方
+        StackTraceElement [] stackTraceElements=e.getStackTrace();
+        for(StackTraceElement st:stackTraceElements){
+            if(!(st.getClassName()).startsWith("com.springboot.learnning")) continue;
+            logger.info(">>>>>INFO:类名"+st.getClassName()+">>>方法名："+st.getMethodName()+">>>行号："+st.getLineNumber());
+            dataError =new DataError();
+            dataError.setExceptionMsg(e.toString());
+                dataError.setClassName(st.getClassName());
+                dataError.setMehtodName(st.getMethodName());
+                dataError.setLineNumber(st.getLineNumber());
+
+            list.add(dataError);
         }
+
         if(e instanceof BaseException){
              BaseException baseException= (BaseException) e;
              return ResultUtil.setResultInfo(baseException.getCode(),baseException.getMessage(),request.getRequestURI(),list,new Date());

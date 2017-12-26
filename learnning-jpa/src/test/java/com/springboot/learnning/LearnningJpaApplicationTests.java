@@ -1,6 +1,5 @@
-package com.springboot.learnning.exception;
+package com.springboot.learnning;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -8,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class LearnningExceptionApplicationTests {
+public class LearnningJpaApplicationTests {
 
 	@Test
 	public void contextLoads() {

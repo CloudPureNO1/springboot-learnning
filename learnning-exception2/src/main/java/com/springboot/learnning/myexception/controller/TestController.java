@@ -45,6 +45,7 @@ private static final Logger logger=Logger.getLogger(TestController.class);
     }
 
     @RequestMapping(value="/msg4")
+
     public String showmsg4(){
         ResultInfo info=null;
         String msg=info.getMsg();

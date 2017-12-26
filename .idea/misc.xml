@@ -13,6 +13,9 @@
         <option value="$PROJECT_DIR$/learnning-thymeleaf2/pom.xml" />
         <option value="$PROJECT_DIR$/learnning-hotload/pom.xml" />
         <option value="$PROJECT_DIR$/learnning-exception/pom.xml" />
+        <option value="$PROJECT_DIR$/learnning-myexception/pom.xml" />
+        <option value="$PROJECT_DIR$/learnning-exception2/pom.xml" />
+        <option value="$PROJECT_DIR$/learnning-jpa/pom.xml" />
       </list>
     </option>
   </component>

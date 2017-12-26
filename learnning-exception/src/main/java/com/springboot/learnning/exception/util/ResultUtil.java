@@ -6,7 +6,7 @@ package com.springboot.learnning.exception.util;
 
 import com.springboot.learnning.exception.domain.Result;
 
- 
+
 public class ResultUtil {
 
     /**
