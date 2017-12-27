@@ -43,14 +43,19 @@ public class DruidConfig {
 
     //durid dataSource
     // 数据源参数
+
+    @Value("${spring.datasource.driver-classname}")
     private String driverClassname;
+    @Value("${spring.datasource.url}")
     private String url;
+    @Value("${spring.datasource.username}")
     private String username;
+    @Value("${spring.datasource.password}")
     private String password;
 
     //数据源其他参数
     @Value("${spring.datasource.filters}")
-    private String fiters;
+    private String filters;
     @Value("${spring.datasource.initialSize}")
     private int initialSize;
     @Value("${spring.datasource.maxActive}")
@@ -123,7 +128,7 @@ public class DruidConfig {
             dataSource.setUsername(username);
             dataSource.setPassword(password);
 
-            dataSource.setFilters(fiters);
+            dataSource.setFilters(filters);
             dataSource.setInitialSize(initialSize);
             dataSource.setMaxActive(maxActive);
             dataSource.setMinIdle(minIdle);
