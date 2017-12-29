@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>文件上传</title>
+</head>
+<body>
+<div align="center" >
+    <div>
+        <form method="post" action="/file/sigleUpload" enctype="multipart/form-data" id="sigleUpload">
+            <p><span>文件：<input type="file" id="sigleFile" name="sigleFile"/></span></p>
+            <p align="right"><span><input type="submit" value="上传"/></span></p>
+        </form>
+    </div>
+
+    <div><span th:text="${sigleMsg}"></span></div>
+
+    <div>
+        <form method="post" action="/file/multiUpload" enctype="multipart/form-data" id="multiUpload">
+            <p><span>文件：<input type="file" id="multiFile1" name="multiFile"/></span></p>
+            <p><span>文件：<input type="file" id="multiFile2" name="multiFile"/></span></p>
+            <p><span>文件：<input type="file" id="multiFile3" name="multiFile"/></span></p>
+            <p align="right"><span><input type="submit" value="上传"/></span></p>
+        </form>
+    </div>
+    <div><span th:text="${multiMsg}"></span></div>
+</div>
+</body>
+</html>
