@@ -1,0 +1,22 @@
+在Spring Boot 中使用xml 集成mybatis, 其核心文件就是实体类和xml的映射文件。
+以User为例：
+model下实体类：User.java
+mapper下：UserMapper.java    形式为普通接口     通过在启动类中使用@MapperScan 进行扫描识别
+sql语句写在：User.xml 文件中
+通过<mapper>的namespace 中配置 UserMapper  来实现 User.xml和UserMapper接口的对应关系。
+
+通过在application.properties中配置xml路径来识别对应的xml文件：
+例如：mybatis.mapper-locations=classpath:mybatis/mapper/*.xml
+
+在Intellij Idea 中，实体类的xml文件应该放在resources路径下（
+IDEA对xml文件处理的方式不同. mapper.xml文件需要放置在resource这个文件夹下.
+而eclipse只要mapper接口文件与mapper.xml放置在同一平级目录就行
+否则报错：。。。。。Invalid bound statement (not found):
+）
+
+
+如果：表中的字段名称和视图类实体类中的对应不上，或者参数中的对应不上，则需要用@Param注解注释成一样
+例如：t_user 表中的user_name
+
+UserMapper接口中的方法：int update(Long id,String name);//这种会报错，update t_user set user_name=#{userName} where user_id=#{userId}
+正确的是：int update(@Param("userId") Long id,@Param("userName") String name) //update t_user set user_name=#{userName} where user_id=#{userId}

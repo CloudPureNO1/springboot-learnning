@@ -1,0 +1,2 @@
+1、Controller 中传入的参数是list ,数组，map,实体类对象时，用@RequestBody 而不能用@ReqeustParam
+2、单是类型参数，用map时，sql 语句中需要用 map.userName,map.ids

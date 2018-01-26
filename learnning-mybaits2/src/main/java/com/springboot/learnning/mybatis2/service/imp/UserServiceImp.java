@@ -5,6 +5,7 @@ import com.springboot.learnning.mybatis2.model.User;
 import com.springboot.learnning.mybatis2.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -26,11 +27,13 @@ public class UserServiceImp implements UserService{
     }
 
     @Override
+    @Transactional
     public int insert(User user) {
         return userMapper.insert(user);
     }
 
     @Override
+    @Transactional
     public int insertUser(Long id, String name, String passwd, String addr) {
         return userMapper.insertUser(id,name,passwd,addr);
     }
